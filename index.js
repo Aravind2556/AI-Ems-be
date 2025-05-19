@@ -3,6 +3,7 @@ const express = require('express')  //express backage
 const mongoose = require('mongoose') //mongoose backge 
 const routes = require('./routes/Register')
 const Devicerouter = require('./routes/Devicedefault')
+const ThinkspeakRouter = require('./routes/ThinkSpeak')
 const cors = require('cors')
 const session = require('express-session')
 const DataRouter = require('./routes/ThinkspeakData')
@@ -12,7 +13,7 @@ const sessionConnect = require('connect-mongodb-session')(session)
 const app = express() 
 
 const corsOptions = {  // orgin setup to front end 
-    origin: ['http://localhost:4001', 'https://3zn7kpnd-4001.inc1.devtunnels.ms', 'https://05v7w8hs-4001.inc1.devtunnels.ms', 'https://dkgsdb5n-4001.inc1.devtunnels.ms'], 
+    origin: ['http://localhost:4001', 'https://3zn7kpnd-4001.inc1.devtunnels.ms', 'https://05v7w8hs-4001.inc1.devtunnels.ms', 'https://dkgsdb5n-4001.inc1.devtunnels.ms', 'http://localhost:4002'], 
     credentials: true,  
 };
 
